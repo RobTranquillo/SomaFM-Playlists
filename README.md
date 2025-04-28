@@ -1,5 +1,5 @@
-# somafm-pls-to-m3u
-gets all somaFM channels and creates m3u playlists for each with both station sources
+# SomaFM Playlists
+Get all somafm.com channels and creates m3u playlists for each station
 
 # now with Sonata support
 you can generate entrys for your Sonata config file (commonly: ~/.config/sonata/sonatarc)
@@ -16,9 +16,15 @@ extend your existing streams list
 - python3 -> os
 
 # how to run
+Works on linux, windows, macos
 ```
  First git clone this repository and  step into it..
+
+ # create and use a virtual environment in the current directory
+ python3 -m venv venv
+ source venv/bin/activate
  
+ # install needed dependencies
  $ pip install -r requirements.txt
  $ python3 somafm.py
 ```
