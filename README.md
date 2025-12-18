@@ -22,9 +22,17 @@ Works on linux, windows, macos
 
  # create and use a virtual environment in the current directory
  python3 -m venv venv
+
+ # activate the virtual environment
+ # On Linux/macOS:
  source venv/bin/activate
- 
+
+ # On Windows (cmd.exe):
+ venv\Scripts\activate.bat
+ # On Windows (PowerShell):
+ venv\Scripts\Activate.ps1
+
  # install needed dependencies
- $ pip install -r requirements.txt
- $ python3 somafm.py
+ pip install -r requirements.txt
+ python3 somafm.py
 ```
