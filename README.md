@@ -16,6 +16,18 @@ extend your existing streams list
 - python3 -> os
 
 # how to run
+On Linux/macOS, with Python 3 installed:
+```sh
+./run.sh
+```
+The script creates a local `venv` if needed, installs the dependencies, and starts
+the playlist generator. Broken environments are backed up as `venv.backup.*` and
+recreated automatically. Generated playlists are saved in the project's `SomaFM/`
+directory, even when the script is launched from another directory. The first run
+requires internet access to install dependencies; playlist generation also requires
+internet access.
+
+Manual setup:
 Works on linux, windows, macos
 ```
  First git clone this repository and  step into it..
@@ -23,16 +35,20 @@ Works on linux, windows, macos
  # create and use a virtual environment in the current directory
  python3 -m venv venv
 
- # activate the virtual environment
- # On Linux/macOS:
- source venv/bin/activate
 
- # On Windows (cmd.exe):
+ # Activate the virtual environment
+ 
+ ## On Linux/macOS:
+ source venv/bin/activate
+ 
+ ## On Windows (cmd.exe):
  venv\Scripts\activate.bat
- # On Windows (PowerShell):
+ 
+ ## On Windows (PowerShell):
  venv\Scripts\Activate.ps1
 
  # install needed dependencies
+ pip install --upgrade pip
  pip install -r requirements.txt
  python3 somafm.py
 ```
